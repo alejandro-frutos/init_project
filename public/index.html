@@ -28,6 +28,28 @@
     </div>
   </div>
 
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Item</h2>
+        <button class="modal-close" onclick="closeEditModal()">&times;</button>
+      </div>
+      <form id="editForm">
+        <input type="hidden" id="editId">
+        <input type="text" id="editName" placeholder="Item Name" required>
+        <textarea id="editDescription" placeholder="Item Description"></textarea>
+        <input type="number" id="editPrice" placeholder="Price" step="0.01" required>
+        <input type="number" id="editQuantity" placeholder="Quantity" required>
+        <div class="modal-actions">
+          <button type="submit" class="btn-save">Save Changes</button>
+          <button type="button" class="btn-cancel" onclick="closeEditModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
+
